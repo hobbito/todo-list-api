@@ -128,7 +128,8 @@ Response example
 ```
 
 ## List of things to improve
-- Add API enpoints tests
+- Add dockerfile 
+- Add API endpoints tests
 - Add pagination to task list
 - Add filters to task list
 - Better API responses
