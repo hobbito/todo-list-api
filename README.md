@@ -1,9 +1,6 @@
 # TO-DO List Application 
-- Allow user to create, update and delete a task
-- Allow user to change task status
-- Allow user to filter the task list
-- Allow user to sort the task list
-
+- Create, Update a& Delete a task
+- Update task status
 
 ## Installation
 - composer install
@@ -16,8 +13,6 @@
 ```bash
 php artisan migrate:fresh --seed
 ```
-
-
 
 ## API Endpoints
 
@@ -57,42 +52,29 @@ Response example
    "data":[
       {
          "id":1,
-         "title":"Deserunt voluptas saepe et dolores quo voluptatum.",
-         "description":"Est non minus nemo id quae optio. Libero consequatur nemo consequatur doloribus maxime ipsum aspernatur cum. In et vel maiores totam magnam eos."
+         "title":"Sapiente perferendis enim aut magni repellat praesentium.",
+         "short_description":"Sunt cupiditate iste enim quaerat unde ut omnis. Q...",
+         "description":"Sunt cupiditate iste enim quaerat unde ut omnis. Quidem odio quam temporibus optio eos sunt. Optio sint est eum. Quod totam laborum aut ab rerum vitae distinctio commodi.",
+         "status":{
+            "id":1,
+            "name":"Pending"
+         },
+         "task_status_id":1,
+         "created_at":"19:53 19-12-2020"
       },
-   ],
-   "links":{
-      "first":"http://todo-list-api.loc/api/v1/tasks?page=1",
-      "last":"http://todo-list-api.loc/api/v1/tasks?page=10",
-      "prev":null,
-      "next":"http://todo-list-api.loc/api/v1/tasks?page=2"
-   },
-   "meta":{
-      "current_page":1,
-      "from":1,
-      "last_page":10,
-      "links":[
-         {
-            "url":null,
-            "label":"&laquo; Previous",
-            "active":false
+      {
+         "id":2,
+         "title":"Voluptatem magni omnis qui assumenda totam optio.",
+         "short_description":"Corrupti magni eligendi dolorum. Id vel praesentiu...",
+         "description":"Corrupti magni eligendi dolorum. Id vel praesentium magnam. Odio ducimus ut rerum. Laudantium assumenda reiciendis sed quod consequatur.",
+         "status":{
+            "id":1,
+            "name":"Pending"
          },
-         {
-            "url":"http://todo-list-api.loc/api/v1/tasks?page=1",
-            "label":1,
-            "active":true
-         },
-         {
-            "url":"http://todo-list-api.loc/api/v1/tasks?page=2",
-            "label":"Next &raquo;",
-            "active":false
-         }
-      ],
-      "path":"http://todo-list-api.loc/api/v1/tasks",
-      "per_page":5,
-      "to":5,
-      "total":50
-   }
+         "task_status_id":1,
+         "created_at":"19:53 19-12-2020"
+      }
+   ]
 }
 ```
 
@@ -145,6 +127,7 @@ Response example
 }
 ```
 
-
-## Screen Shot
-
+## List of things to improve
+- Add pagination to task list
+- Add filters to task list
+- Better API responses
