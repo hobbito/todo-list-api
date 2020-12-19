@@ -1,5 +1,5 @@
 # TO-DO List Application 
-- Create, Update a& Delete a task
+- Create, Update & Delete a task
 - Update task status
 
 ## Installation
